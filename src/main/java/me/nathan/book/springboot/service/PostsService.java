@@ -1,4 +1,4 @@
-package me.nathan.book.springboot.service.posts;
+package me.nathan.book.springboot.service;
 
 import lombok.RequiredArgsConstructor;
 import me.nathan.book.springboot.domain.posts.Posts;
@@ -30,6 +30,7 @@ public class PostsService {
 
         return id;
     }
+
 
     public PostsResponseDto findById(Long id) {
         Posts entity = postsRepository.findById(id)

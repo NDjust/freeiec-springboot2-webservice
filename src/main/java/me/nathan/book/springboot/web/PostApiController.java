@@ -1,7 +1,7 @@
 package me.nathan.book.springboot.web;
 
 import lombok.RequiredArgsConstructor;
-import me.nathan.book.springboot.service.posts.PostsService;
+import me.nathan.book.springboot.service.PostsService;
 import me.nathan.book.springboot.web.dto.PostsResponseDto;
 import me.nathan.book.springboot.web.dto.PostsSaveRequestDto;
 import me.nathan.book.springboot.web.dto.PostsUpdateRequestsDto;
