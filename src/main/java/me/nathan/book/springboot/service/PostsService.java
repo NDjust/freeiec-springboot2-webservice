@@ -6,7 +6,7 @@ import me.nathan.book.springboot.domain.posts.PostsRepository;
 import me.nathan.book.springboot.web.dto.PostsListResponseDto;
 import me.nathan.book.springboot.web.dto.PostsResponseDto;
 import me.nathan.book.springboot.web.dto.PostsSaveRequestDto;
-import me.nathan.book.springboot.web.dto.PostsUpdateRequestsDto;
+import me.nathan.book.springboot.web.dto.PostsUpdateRequestDto;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.*;
 
@@ -24,7 +24,7 @@ public class PostsService {
     }
 
     @Transactional
-    public Long update(Long id, PostsUpdateRequestsDto requestDto) {
+    public Long update(Long id, PostsUpdateRequestDto requestDto) {
         Posts posts = postsRepository.findById(id)
                 .orElseThrow(() ->
                         new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));

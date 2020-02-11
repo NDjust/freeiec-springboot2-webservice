@@ -3,7 +3,7 @@ package me.nathan.book.springboot.web;
 import me.nathan.book.springboot.domain.posts.Posts;
 import me.nathan.book.springboot.domain.posts.PostsRepository;
 import me.nathan.book.springboot.web.dto.PostsSaveRequestDto;
-import me.nathan.book.springboot.web.dto.PostsUpdateRequestsDto;
+import me.nathan.book.springboot.web.dto.PostsUpdateRequestDto;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -82,15 +82,15 @@ public class PostsApiControllerTest {
         String expectedTitle = "title2";
         String expectedContent = "content2";
 
-        PostsUpdateRequestsDto requestsDto =
-                PostsUpdateRequestsDto.builder()
+        PostsUpdateRequestDto requestsDto =
+                PostsUpdateRequestDto.builder()
                 .title(expectedTitle)
                 .content(expectedContent)
                 .build();
 
         String url = "http://localhost:" + port + "/api/v1/posts/" + updateId;
 
-        HttpEntity<PostsUpdateRequestsDto> requestEntity =
+        HttpEntity<PostsUpdateRequestDto> requestEntity =
                 new HttpEntity<>(requestsDto);
 
         // when
